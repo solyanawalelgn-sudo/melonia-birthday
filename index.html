@@ -1,122 +1,1099 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For Melania 🦋💜</title>
 
 <style>
 
-/* =========================
-   MAIN COLORS
-========================= */
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-
-  margin: 0;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  color: #39254d;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fcf9ff,
-      #eee4ff,
-      #f8efff
-    );
-
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #3b2750;
+    background:
+        radial-gradient(circle at top left, #f4eaff, transparent 35%),
+        radial-gradient(circle at bottom right, #eadbff, transparent 35%),
+        #fbf8ff;
+    overflow-x: hidden;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* ---------- HERO ---------- */
 
 .hero {
-
-  min-height: 100vh;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-  padding: 25px;
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
 }
 
+.hero::before {
+    content: "🦋";
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    font-size: 35px;
+    opacity: .5;
+    transform: rotate(-15deg);
+}
+
+.hero::after {
+    content: "🦋";
+    position: absolute;
+    bottom: 15%;
+    right: 12%;
+    font-size: 45px;
+    opacity: .45;
+    transform: rotate(15deg);
+}
 
 .hero small {
-
-  color: #8b5cf6;
-
-  letter-spacing: 3px;
-
-  font-weight: bold;
-
+    color: #8b5cf6;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
-
 
 .hero h1 {
-
-  font-family: Georgia, serif;
-
-  font-size:
-    clamp(
-      4rem,
-      15vw,
-      7rem
-    );
-
-  line-height: .9;
-
-  margin: 30px 0;
-
-  color: #39254d;
-
+    font-family: Georgia, serif;
+    font-size: clamp(4rem, 15vw, 7rem);
+    line-height: .9;
+    margin: 28px 0;
+    color: #382247;
 }
-
 
 .hero h1 span {
-
-  color: #9b6cff;
-
+    color: #9b6cff;
 }
-
 
 .hero p {
+    max-width: 520px;
+    line-height: 1.8;
+    color: #766582;
+    font-size: 16px;
+}
 
-  max-width: 520px;
+button {
+    border: none;
+    background: #4b3264;
+    color: white;
+    padding: 16px 27px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(80,40,120,.18);
+}
 
-  line-height: 1.8;
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: #7047a1;
+}
 
-  color: #705f80;
+.hidden {
+    display: none !important;
+}
 
+/* ---------- CONTENT ---------- */
+
+.content {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,.88);
+    border: 1px solid #dfcef3;
+    border-radius: 30px;
+    padding: 38px;
+    margin: 30px 0;
+    box-shadow: 0 18px 50px rgba(90,50,130,.10);
+}
+
+h2, h3 {
+    font-family: Georgia, serif;
+}
+
+/* ---------- BIRTHDAY ---------- */
+
+.welcome {
+    text-align: center;
+}
+
+.date {
+    color: #8b5cf6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.welcome h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #75627f;
+    line-height: 1.9;
+}
+
+.signature {
+    color: #8b5cf6 !important;
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+/* ---------- STORY ---------- */
+
+.story {
+    text-align: center;
+}
+
+.butterfly {
+    font-size: 55px;
+}
+
+.story h2 {
+    font-size: 40px;
+}
+
+.story p {
+    max-width: 700px;
+    margin: 16px auto;
+}
+
+.story strong {
+    color: #7047a1;
+}
+
+.twins {
+    color: #8b5cf6 !important;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+/* ---------- BEST FRIEND ---------- */
+
+.bestfriend {
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f1e5ff
+        );
+}
+
+.bestfriend h2 {
+    font-size: 34px;
+}
+
+.bestfriend .big {
+    font-family: Georgia, serif;
+    color: #7b4bb0;
+    font-size: 21px;
+}
+
+/* ---------- PHOTOS ---------- */
+
+.photos-title {
+    text-align: center;
+}
+
+.photos-title h2 {
+    font-size: 40px;
+}
+
+.photos-title p {
+    color: #806e8d;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.photo {
+    background: white;
+    padding: 12px;
+    border-radius: 24px;
+    border: 1px solid #dfcef3;
+    box-shadow: 0 12px 30px rgba(90,50,130,.10);
+    text-align: center;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.photo:hover {
+    transform: translateY(-5px) rotate(.4deg);
+}
+
+.photo img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.photo h3 {
+    margin: 15px 0 5px;
+    color: #4b3264;
+}
+
+.photo p {
+    color: #806d8d;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ---------- REASONS ---------- */
+
+.reasons h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.reason {
+    background: #f0e5ff;
+    padding: 17px;
+    border-radius: 17px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* ---------- LETTER ---------- */
+
+.note {
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f2e6ff
+        );
+}
+
+.note h2 {
+    font-size: 36px;
+}
+
+.big-note {
+    color: #8b5cf6 !important;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+/* ---------- FINAL ---------- */
+
+.final {
+    text-align: center;
+}
+
+.final h2 {
+    font-size: 40px;
+}
+
+.final-message {
+    margin-top: 28px;
+    padding: 30px;
+    background: #eee1ff;
+    border-radius: 23px;
+    animation: pop .6s ease;
+}
+
+.final-message .butterfly {
+    font-size: 65px;
+}
+
+.final-message h3 {
+    font-size: 29px;
+}
+
+.final-message p {
+    line-height: 1.8;
+    color: #705c80;
+}
+
+.final-message strong {
+    color: #6f43a1;
+    font-family: Georgia, serif;
+    font-size: 19px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    color: #927ba5;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+
+/* ---------- FLOATING BUTTERFLIES ---------- */
+
+.floating {
+    position: fixed;
+    top: -40px;
+    font-size: 22px;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 20;
+}
+
+@keyframes fall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width: 650px) {
+
+    .hero h1 {
+        font-size: 4.2rem;
+    }
+
+    .card {
+        padding: 26px 18px;
+    }
+
+    .photos {
+        grid-template-columns: 1fr;
+    }
+
+    .photo img {
+        height: 350px;
+    }
+
+    .welcome h2,
+    .story h2,
+    .photos-title h2,
+    .final h2 {
+        font-size: 31px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div class="hero">
+
+    <small>
+        A LITTLE BIRTHDAY SURPRISE 🦋
+    </small>
+
+    <h1>
+        Hey, Melania
+        <span>🦋</span>
+    </h1>
+
+    <p>
+        Four years. A thousand memories.
+        One very special person.
+    </p>
+
+    <button onclick="openSurprise()">
+        Open your surprise 💌
+    </button>
+
+</div>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<section id="surprise" class="content hidden">
+
+
+<!-- BIRTHDAY CARD -->
+
+<div class="card welcome">
+
+    <div class="date">
+        AUGUST 27 · 🎂
+    </div>
+
+    <h2>
+        Happy Birthday, Melania! 💜
+    </h2>
+
+    <p>
+        Today is about celebrating you —
+        the friend who somehow became a sister.
+    </p>
+
+    <p class="signature">
+        Love, Yabkal ♡
+    </p>
+
+</div>
+
+
+<!-- OUR STORY -->
+
+<div class="card story">
+
+    <div class="butterfly">
+        🦋
+    </div>
+
+    <h2>
+        Our Story
+    </h2>
+
+    <p>
+        Four years ago, we met when I was feeling lonely.
+        You told me,
+        <strong>“I'll be your sister.”</strong>
+        And somehow, you became exactly that. 🤍
+    </p>
+
+    <p>
+        People always say we're like twins —
+        not because we look alike 😂,
+        but because of how close we are
+        and how well we understand each other.
+    </p>
+
+    <p class="twins">
+        Four years later, you're still one of
+        the most special people in my life. 💜🦋
+    </p>
+
+</div>
+
+
+<!-- BEST FRIEND MESSAGE -->
+
+<div class="card bestfriend">
+
+    <div class="butterfly">
+        🦋
+    </div>
+
+    <h2>
+        To My Best Friend 💜
+    </h2>
+
+    <p>
+        Melania, you're not just my best friend.
+        Somewhere along these four years,
+        you became my sister, my safe person,
+        and one of the people who made my life brighter.
+    </p>
+
+    <p class="big">
+        I'm so lucky that I met you. 🥹💜
+    </p>
+
+</div>
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<div class="card">
+
+    <div class="photos-title">
+
+        <h2>
+            Four Years of Us 🦋
+        </h2>
+
+        <p>
+            Twenty little pieces of our story. 💜
+        </p>
+
+    </div>
+
+
+    <div class="photos">
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763262579_28047067694977542_2777024355609582817_n.jpg"
+            alt="Memory 1">
+
+            <h3>
+                Memory #1 🦋
+            </h3>
+
+            <p>
+                A moment only we understand 😂
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763353932_1091613216616269_8026376843775211069_n.jpg"
+            alt="Memory 2">
+
+            <h3>
+                Memory #2 💜
+            </h3>
+
+            <p>
+               እንዲህ ነበር ጅማሬያችን 🥹🦋 
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763761544_1685737339201698_574579156069123792_n.jpg"
+            alt="Memory 3">
+
+            <h3>
+                Memory #3 ✨
+            </h3>
+
+            <p>
+                Four years and still going.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/764363923_1600864984955948_1244847966769342500_n.jpg"
+            alt="Memory 4">
+
+            <h3>
+                Memory #4 🦋
+            </h3>
+
+            <p>
+               አንድ ላይ ወደ ስኬት 🎓🦋 
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/765670580_1550460423489773_4705310197237618392_n.jpg"
+            alt="Memory 5">
+
+            <h3>
+                Memory #5 💗
+            </h3>
+
+            <p>
+                ከቤተክርስቲያን እስከ ሳቅ… ቆንጆ ቀን 🦋💜
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/646336333_938356725316693_6638408913281783835_n.jpg"
+            alt="Memory 6">
+
+            <h3>
+                Memory #6 🦋
+            </h3>
+
+            <p>
+                us bieng us.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763211360_2010016989629459_7951679978723818024_n.jpg"
+            alt="Memory 7">
+
+            <h3>
+                Memory #7 💜
+            </h3>
+
+            <p>
+                you'r last birthday.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763486171_1542890907318014_8293708023365223400_n.jpg"
+            alt="Memory 8">
+
+            <h3>
+                Memory #8 ✨
+            </h3>
+
+            <p>
+                A memory worth keeping.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/763721932_1075713018270699_3566818307530089767_n.jpg"
+            alt="Memory 9">
+
+            <h3>
+                Memory #9 🦋
+            </h3>
+
+            <p>
+                Another gratuation memory.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/764035773_873711498932169_8866234620605371972_n.jpg"
+            alt="Memory 10">
+
+            <h3>
+                Memory #10 💜
+            </h3>
+
+            <p>
+                stota and us.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/764523888_1060543256436593_2129774185316178237_n.jpg"
+            alt="Memory 11">
+
+            <h3>
+                Memory #11 🦋
+            </h3>
+
+            <p>
+                we look like a twin here.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/764861889_1600619118258852_2753070244164290918_n.jpg"
+            alt="Memory 12">
+
+            <h3>
+                Memory #12 💜
+            </h3>
+
+            <p>
+               i love you የክፍላችን ትዝታ 🥹💜
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/764924174_1576842003820767_1922227752882876211_n.jpg"
+            alt="Memory 13">
+
+            <h3>
+                Memory #13 ✨
+            </h3>
+
+            <p>
+                ከክፍል እስከ ዕድሜ ልክ ትዝታ 🦋
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/765619726_1100619098970644_22394723134535337_n.jpg"
+            alt="Memory 14">
+
+            <h3>
+                Memory #14 🦋
+            </h3>
+
+            <p>
+                የምረቃችን ቆንጆ ትዝታ 💜✨
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/766736353_1384124983825146_8053622804411619728_n.jpg"
+            alt="Memory 15">
+
+            <h3>
+                Memory #15 💜
+            </h3>
+
+            <p>
+                Still one of my favorites.
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/768420337_4453339094994606_6067610388890376305_n.jpg"
+            alt="Memory 16">
+
+            <h3>
+                Memory #16 🦋
+            </h3>
+
+            <p>
+                የወደፊታችንን አብረን ስናቅድ 💜
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/768452284_3171438629913491_5962775905197039122_n.jpg"
+            alt="Memory 17">
+
+            <h3>
+                Memory #17 ✨
+            </h3>
+
+            <p>
+                እንዲህ ነበር ጅማሬያችን 🥹🦋
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/768592109_1444666661053852_3277980419778268855_n.jpg"
+            alt="Memory 18">
+
+            <h3>
+                Memory #18 💜
+            </h3>
+
+            <p>
+                አብረን ጀመርን፣ አብረን ጨረስን 🦋🎓
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/769251425_1406356484719867_6339033110815123564_n.jpg"
+            alt="Memory 19">
+
+            <h3>
+                Memory #19 🦋
+            </h3>
+
+            <p>
+                አብረን ተመረቅን 🎓💜
+            </p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+            src="photos/769363174_1389476496446283_3904482373471719425_n.jpg"
+            alt="Memory 20">
+
+            <h3>
+                Memory #20 💗
+            </h3>
+
+            <p>
+                ቤተክርስቲያን + መልካም ጊዜ = እኛ 💜.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- WHY SHE IS SPECIAL -->
+
+<div class="card reasons">
+
+    <h2>
+        Why You're So Special To Me 🦋
+    </h2>
+
+    <div class="reason">
+        🤍 You were there when I needed someone.
+    </div>
+
+    <div class="reason">
+        😂 You made my life more fun when I felt lonely.
+    </div>
+
+    <div class="reason">
+        🫶 You know how to listen and understand me.
+    </div>
+
+    <div class="reason">
+        🌱 You're mature and always give me good advice.
+    </div>
+
+    <div class="reason">
+        ✨ You've seen different versions of me and stayed.
+    </div>
+
+    <div class="reason">
+        👭 You became my sister without needing the same blood.
+    </div>
+
+</div>
+
+
+<!-- LETTER -->
+
+<div class="card note">
+
+    <div class="butterfly">
+        🦋
+    </div>
+
+    <h2>
+        A Note From Yabkal 💌
+    </h2>
+
+    <p>
+        Melonia, thank you for finding me when I felt alone.
+        Thank you for making ordinary days fun,
+        for helping me when I was down,
+        and for being someone I can always count on.
+    </p>
+
+    <p>
+        I hope you always remember how deeply appreciated
+        you are. I don't take our friendship for granted —
+        not after four years, and not ever.
+    </p>
+
+    <p class="big-note">
+        You said you'd be my sister.
+        You kept your promise. 💜
+    </p>
+
+</div>
+
+
+<!-- FINAL SURPRISE -->
+
+<div class="card final">
+
+    <div class="butterfly">
+        🦋
+    </div>
+
+    <h2>
+        One Last Surprise...
+    </h2>
+
+    <p>
+        There's one more little message for you.
+    </p>
+
+    <button onclick="showFinal()">
+        Tap here 🥹
+    </button>
+
+
+    <div id="finalMessage"
+         class="final-message hidden">
+
+        <div class="butterfly">
+            🦋💜🦋
+        </div>
+
+        <h3>
+            Happy Birthday, Melonia!
+        </h3>
+
+        <p>
+            Here's to year 5,
+            more memories,
+            more laughter,
+            more chaos,
+            and a friendship that keeps growing. 💗
+        </p>
+
+        <p>
+            No matter where life takes us,
+            I hope you always remember
+            that you'll always have me.
+        </p>
+
+        <strong>
+            Yabkal ♡ Melonia
+        </strong>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<footer>
+    Made with love by Yabkal 🦋💜
+</footer>
+
+
+<script>
+
+function openSurprise() {
+
+    document
+        .getElementById("surprise")
+        .classList
+        .remove("hidden");
+
+    document
+        .getElementById("surprise")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+    butterflies(18);
 }
 
 
-button {
+function showFinal() {
 
-  border: none;
+    document
+        .getElementById("finalMessage")
+        .classList
+        .remove("hidden");
 
-  border-radius: 40px;
+    butterflies(35);
+}
 
-  padding: 16
+
+function butterflies(number) {
+
+    for (let i = 0; i < number; i++) {
+
+        const butterfly =
+            document.createElement("div");
+
+        butterfly.className = "floating";
+
+        butterfly.textContent =
+            ["🦋", "💜", "✨"][Math.floor(
+                Math.random() * 3
+            )];
+
+        butterfly.style.left =
+            Math.random() * 100 + "vw";
+
+        butterfly.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        butterfly.style.animationDelay =
+            Math.random() + "s";
+
+        document.body.appendChild(
+            butterfly
+        );
+
+        setTimeout(
+            () => butterfly.remove(),
+            8000
+        );
+    }
+}
+
+</script>
+
+</body>
+</html>
